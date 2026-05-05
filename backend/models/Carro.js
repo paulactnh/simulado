@@ -1,35 +1,35 @@
-const { Datatypes} =require('sequelize')
+const { DataTypes} =require('sequelize')
 
 const db = require('../db/conn')
 
 const Carro = db.define('carro',{
     codCarro:{
-       type: Datatypes.INTEGER,
+       type: DataTypes.INTEGER,
        primaryKey: true,
        autoIncrement: true 
     },
     nome:{
-        type: Datatypes.STRING(100),
+        type: DataTypes.STRING(100),
         allowNull: false
     },
     marca:{
-        type:Datatypes.STRING(100),
+        type:DataTypes.STRING(100),
         allowNull: false
     },
     categoria:{
-        type:Datatypes.STRING(100),
+        type:DataTypes.STRING(100),
         allowNull: false
     },
     ano:{
-        type: Datatypes.FLOAT,
+        type: DataTypes.FLOAT,
         allowNull: false
     },
-    preco_fabrica:{
-        type:Datatypes.FLOAT,
+    precoFabrica:{
+        type:DataTypes.FLOAT,
         allowNull:false
     },
-    preco_venda:{
-        type: Datatypes.FLOAT,
+    precoVenda:{
+        type: DataTypes.FLOAT,
         allowNull: false
     }
 },{
